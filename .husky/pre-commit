@@ -1,0 +1,5 @@
+#!/bin/sh
+
+pnpm init
+pnpm test:e2e
+pnpm test:unit

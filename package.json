@@ -4,21 +4,40 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "test:unit-watch": "jest --watch",
+    "lint": "stylelint '**/*.css' && eslint .",
+    "test:e2e": "playwright test ./tests/e2e",
+    "test:unit": "jest ./tests/tests",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "next start"
   },
   "dependencies": {
+    "@kuma-ui/core": "^1.5.2",
+    "next": "13.5.6",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "13.5.6"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@kuma-ui/next-plugin": "^1.1.12",
+    "@playwright/test": "^1.39.0",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^29.5.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "eslint": "^8",
-    "eslint-config-next": "13.5.6"
+    "eslint-config-next": "13.5.6",
+    "husky": "^8.0.3",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-order": "^6.0.3",
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": "18.18.2",
+    "pnpm": "8.9.2"
   }
 }

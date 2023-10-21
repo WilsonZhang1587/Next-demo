@@ -1,0 +1,65 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": ["stylelint-order"],
+  "rules": {
+    "selector-max-id": 0,
+    "block-no-empty": null,
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global", "local"]
+      }
+    ],
+    "order/properties-order": [
+      [
+        {
+          "groupName": "positioning",
+          "noEmptyLineBetween": true,
+          "properties": [
+            "position",
+            "top",
+            "right",
+            "bottom",
+            "left",
+            "z-index"
+          ]
+        },
+        {
+          "groupName": "box-model",
+          "noEmptyLineBetween": true,
+          "properties": [
+            "display",
+            "box-sizing",
+            "width",
+            "height",
+            "max-width",
+            "max-height",
+            "min-width",
+            "min-height",
+            "margin",
+            "padding",
+            "border",
+            "border-width",
+            "border-style",
+            "border-color",
+            "border-radius"
+          ]
+        },
+        {
+          "groupName": "typography",
+          "noEmptyLineBetween": true,
+          "properties": [
+            "font",
+            "font-family",
+            "font-size",
+            "font-weight",
+            "line-height",
+            "color",
+            "text-align"
+          ]
+        }
+      ],
+      { "unspecified": "bottom" }
+    ]
+  }
+}
