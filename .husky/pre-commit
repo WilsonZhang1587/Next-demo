@@ -1,5 +1,5 @@
 #!/bin/sh
 
-pnpm init
+pnpm lint
 pnpm test:e2e
 pnpm test:unit
